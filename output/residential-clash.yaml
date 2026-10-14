@@ -6,9 +6,9 @@ log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
   type: vless
-  server: 60.248.219.54
+  server: 60.248.219.78
   port: 443
-  uuid: 06e177f7-240d-4687-bd85-235505801a5e
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   udp: true
   tls: true
   skip-cert-verify: true
@@ -17,7 +17,7 @@ proxies:
   ws-opts:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
-      Host: 60.248.219.54
+      Host: 60.248.219.78
 - name: 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe
   type: vless
   server: 103.180.20.108
@@ -32,19 +32,22 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
       Host: 103.180.20.108
-- name: 🇰🇷 韩国 (South Korea) 03 (家宽) - xiaohe
-  type: vless
-  server: 172.66.170.53
-  port: 8880
-  uuid: 38ede46b-d237-4c76-9de1-a10738642adc
+- name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - xiaohe
+  type: vmess
+  server: fujrdt.d6f54hd1j.cc
+  port: 443
+  uuid: d877dc6f-7323-4b47-a7dd-14228cbae854
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: fujrdt.d6f54hd1j.cc
   network: ws
   ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
+    path: /
     headers:
-      Host: summer-hat-ba5c.430.workers.dev
+      Host: fujrdt.d6f54hd1j.cc
 - name: 🇭🇰 中国香港 (Hong Kong) 04 (家宽) - xiaohe
   type: vless
   server: 103.148.73.173
@@ -66,7 +69,7 @@ proxy-groups:
   - AUTO
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe
-  - 🇰🇷 韩国 (South Korea) 03 (家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 04 (家宽) - xiaohe
 - name: AUTO
   type: url-test
@@ -75,7 +78,7 @@ proxy-groups:
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe
-  - 🇰🇷 韩国 (South Korea) 03 (家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 04 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
