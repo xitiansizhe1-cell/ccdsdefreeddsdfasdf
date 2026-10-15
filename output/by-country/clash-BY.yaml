@@ -4,31 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+- name: 🇧🇾 BY 01 - xiaohe
   type: vless
-  server: 172.66.44.211
-  port: 2083
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  server: 95.128.71.79
+  port: 14430
+  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: wk1.f1w.de5.net
   network: ws
   ws-opts:
-    path: /
+    path: /vless
     headers:
-      Host: wk1.f1w.de5.net
+      Host: 95.128.71.79
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+  - 🇧🇾 BY 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+  - 🇧🇾 BY 01 - xiaohe
 rules:
 - MATCH,PROXIES
