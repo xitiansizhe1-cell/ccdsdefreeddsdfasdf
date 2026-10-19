@@ -12,12 +12,19 @@ proxies:
   password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
   udp: true
 - name: 🇨🇿 CZ 02 - xiaohe
-  type: ss
-  server: 67.159.18.34
-  port: 17001
-  cipher: aes-256-gcm
-  password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
+  type: vless
+  server: 190.93.244.209
+  port: 443
+  uuid: 903883c7-e62f-436e-a28c-e777637bb757
   udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: loaD-Bal-AC000A.sTAGiNg-Api-78c1a1.WorKErs.deV
+  network: ws
+  ws-opts:
+    path: /vl/7yxyRoUx67K43EW4zOdKqawWj2mXHsfh?ed=2560
+    headers:
+      Host: LOAd-bal-Ac000a.StaGInG-aPi-78C1A1.wOrkeRs.dEV
 proxy-groups:
 - name: PROXIES
   type: select
