@@ -6,18 +6,16 @@ log-level: info
 proxies:
 - name: 🇮🇩 ID 01 - xiaohe
   type: vless
-  server: 162.159.254.201
+  server: 130.94.95.126
   port: 443
-  uuid: 53bbdad4-2f4e-45db-8df4-fa491a6a7227
+  uuid: ed94398f-893f-40c6-b14c-bf02b5f6be16
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: freeceshi6.frii.site
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM---MARAMBASHI---MARAMBASHI---MARAMBASHI---MARAMBASHI
-    headers:
-      Host: freeceshi6.frii.site
+  reality-opts:
+    public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
+  servername: navi.bankrate.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
